@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="css/www-pkg.css" rel="stylesheet" type="text/css">
+    <script src="./js/SearchResults.js"></script>
+
+</head>
+<body>
+
+<div class="main-header main-content-wrap js-main-header webview-hidden">
+    <div class="main-header_wrapper">
+        <div class="content-container">
+
+            <div class="arrange arrange--18 arrange--middle main-header_arrange">
+
+                <div class="arrange_unit main-header--full_arrange_unit">
+
+                    <div class="main-header_logo js-analytics-click" id="logo" data-analytics-label="logo">
+                        <a href="/">Yelp</a>
+                    </div>
+
+                </div>
+
+
+
+                <div class="arrange_unit arrange_unit--fill align-middle main-header--full_arrange_unit main-header_search-container">
+                    <div class="main-header_search responsive-hidden-medium-only">
+                        <div method="get" action="/search" id="header_find_form" class="main-search yform u-space-b0" role="search" data-component-bound="true">
+                            <div class="arrange arrange--stack">
+                                <div class="arrange_unit arrange_unit--fill">
+                                    <div class="arrange arrange--equal arrange--stack">
+                                        <div class="arrange_unit main-search_search-field-arrange">
+                                            <div class="main-search_suggestions-field search-field-container find-decorator">
+                                                <label class="main-search_pseudo-input main-search_pseudo-input--find pseudo-input">
+                                                    <span class="pseudo-input_text">Click to search: </span>
+                                                    <span class="pseudo-input_field-holder" style="position: relative; display: block;" data-component-bound="true">
+                                                        <span class="pseudo-input_field-holder" style="position: relative; display: block;"
+                                                              data-component-bound="true">
+
+                                        <a href="searchPage.html">
+                                            Sushi
+                                        </a>
+                                        or
+                                        <a href="searchPage.html">
+                                            Cafe
+                                        </a>
+                            </span>
+            </span>
+                                                </label>
+                                                <div class="main-search_suggestions suggestions-list-container search-suggestions-list-container hidden" data-component-bound="true">
+                                                    <ul class="suggestions-list" role="listbox" aria-label="Search results"></ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="arrange_unit main-search_near-field-arrange  main-search_search-field-arrange arrange_unit--stack-12">
+                                            <div class="main-search_suggestions-field search-field-container near-decorator">
+                                                <label class="main-search_pseudo-input main-search_pseudo-input--near pseudo-input">
+                                                    <span class="pseudo-input_text">Near</span>
+                                                    <span class="main-search_field-holder pseudo-input_field-holder">
+                <input disabled maxlength="80" id="dropperText_Mast" autocomplete="off" value="Vancouver, BC" placeholder="address, neighbourhood, city, prov. or postal code" data-query="Vancouver, BC" class="main-search_field pseudo-input_field" aria-autocomplete="list" tabindex="2" data-component-bound="true"><input type="hidden" maxlength="80" data-component-bound="true" name="find_loc" value="Vancouver, BC">
+                <input type="hidden" name="ns" value="1">
+            </span>
+                                                </label>
+                                                <div class="main-search_suggestions suggestions-list-container location-suggestions-list-container hidden" data-component-bound="true">
+                                                    <ul class="suggestions-list" role="listbox" aria-label="Search results"></ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="arrange_unit main-search_actions arrange_unit--stack-12">
+                                    <div class="arrange arrange--wrap arrange--6">
+                                        <div class="arrange_unit hidden-non-responsive-inline-block responsive-visible-small-inline-block main-search_action">
+
+                                            <a class="ybtn ybtn--primary main-header_button js-search-close main-search_close">
+                                                Cancel
+                                            </a>
+                                        </div>
+                                        <div class="arrange_unit main-search_action arrange_unit--stack-12">
+
+                                            <button class="ybtn ybtn--primary main-search_submit main-header_button" id="header-search-submit" tabindex="3" title="Search" type="submit" value="submit">
+                            <span class="main-search_action-icon-wrap js-search-icon-wrap">
+                                <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-search icon--size-24 icon--inverse icon--fallback-inverted">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24x24_search"></use>
+    </svg>
+</span>
+                                <span class="u-offscreen">Search</span>
+                            </span>
+                                                <div class="circle-spinner js-circle-spinner hidden">
+                                                    <div class="circle-spinner_segment container1">
+                                                        <div class="circle1"></div>
+                                                        <div class="circle2"></div>
+                                                        <div class="circle3"></div>
+                                                        <div class="circle4"></div>
+                                                    </div>
+                                                    <div class="circle-spinner_segment container2">
+                                                        <div class="circle1"></div>
+                                                        <div class="circle2"></div>
+                                                        <div class="circle3"></div>
+                                                        <div class="circle4"></div>
+                                                    </div>
+                                                    <div class="circle-spinner_segment container3">
+                                                        <div class="circle1"></div>
+                                                        <div class="circle2"></div>
+                                                        <div class="circle3"></div>
+                                                        <div class="circle4"></div>
+                                                    </div>
+                                                </div>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="arrange_unit main-header--full_arrange_unit">
+                    <div class="arrange arrange--6">
+                        <div class="arrange_unit u-nowrap">
+                            <div class="main-header_account webview-hidden">
+                                <ul class="header-nav">
+                                    <li class="header-nav_item responsive-hidden-small js-analytics-click" data-analytics-label="signup">
+
+                                    </li>
+                                    <li class="header-nav_item">
+                                        <a class="header-nav_link header-nav_link--log-in js-log-in-button" href="https://www.yelp.ca/login?return_url=%2Fsearch%3Ffind_desc%3Dsushi%26find_loc%3DVancouver%252C%2BBC%26ns%3D1">
+                                            Log In
+                                        </a>
+
+                                    </li>
+                                </ul>
+
+                                <div id="topbar-account-item" class="user-account clearfix drop-menu-origin hidden-non-responsive-block responsive-visible-small-block" data-component-bound="true">
+
+                                    <a class="ybtn ybtn--primary drop-menu-link user-account_button" href="javascript:;" id="topbar-account-link" data-component-bound="true">
+            <span aria-hidden="true" style="width: 14px; height: 14px;" class="icon icon--14-triangle-down icon--size-14 icon--inverse icon--fallback-inverted u-triangle-direction-down user-account_button-arrow responsive-visible-large-inline-block">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#14x14_triangle_down"></use>
+    </svg>
+</span>
+                                        <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-hamburger icon--size-24 icon--inverse icon--fallback-inverted drop-menu-link_open">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24x24_hamburger"></use>
+    </svg>
+</span>
+                                        <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-close icon--size-24 icon--inverse icon--fallback-inverted drop-menu-link_close">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24x24_close"></use>
+    </svg>
+</span>
+                                    </a>
+                                    <div id="topbar-account-wrap" class="drop-menu drop-menu-has-arrow" data-component-bound="true">
+                                        <div class="drop-menu-arrow responsive-hidden-small"></div>
+
+                                        <div class="arrange arrange--6 arrange--equal drop-menu_auth-buttons">
+                                            <div class="arrange_unit">
+
+                                                <a class="ybtn ybtn-full" href="https://www.yelp.ca/login?return_url=%2Fsearch%3Ffind_desc%3Dsushi%26find_loc%3DVancouver%252C%2BBC%26ns%3D1">
+                                                    Login
+                                                </a>
+                                            </div>
+                                            <div class="arrange_unit">
+
+                                                <a class="ybtn ybtn--primary ybtn-full" href="/signup">
+                                                    Sign Up
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <ul class="drop-menu-group--nav drop-menu-group">
+                                            <li class="drop-down-menu-link">
+                                                <a class="js-analytics-click arrange arrange--middle arrange--6" href="/user_details" data-analytics-label="">
+                                                    <strong class="arrange_unit">
+                    <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-profile icon--size-24 u-space-r1">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24x24_profile"></use>
+    </svg>
+</span>About Me
+                                                    </strong>
+                                                    <span class="arrange_unit arrange_unit--fill u-text-right">
+                <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-chevron-right icon--size-24 hidden-non-responsive-inline-block responsive-visible-medium-inline-block">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24x24_chevron_right"></use>
+    </svg>
+</span>
+            </span>
+                                                </a>
+                                            </li>
+
+
+
+                                            <li class="drop-down-menu-link hidden-non-responsive-block responsive-visible-medium-block">
+                                                <a class="js-analytics-click arrange arrange--middle arrange--6" href="/talk" data-analytics-label="">
+                                                    <strong class="arrange_unit">
+                    <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-talk icon--size-24 u-space-r1">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24x24_talk"></use>
+    </svg>
+</span>Talk
+                                                    </strong>
+                                                    <span class="arrange_unit arrange_unit--fill u-text-right">
+                <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-chevron-right icon--size-24 hidden-non-responsive-inline-block responsive-visible-medium-inline-block">
+    <svg class="icon_svg">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#24x24_chevron_right"></use>
+    </svg>
+</span>
+            </span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="container">
+        <div class="clearfix layout-block layout-a scroll-map-container search-results-block">
+            <div class="column column-alpha">
+                <div class="results-wrapper indexed-biz-archive" style="position: relative; min-height: 345px;">
+                    <div class="search-results-content">
+                        <ul class="ylist ylist-bordered search-results">
+                            <li id="sushi1" draggable="true" ondragstart="drag(event)" class="regular-search-result">
+                                <div class="search-result natural-search-result" data-biz-id="JeDerIcvQsgd9q6aKXlUjw" data-key="1" data-component-bound="true">
+                                    <div class="biz-listing-large">
+                                        <div class="main-attributes">
+                                            <div class="media-block media-block--12">
+                                                <div class="media-avatar">
+                                                    <div class="photo-box pb-90s">
+                                                        <a href="/biz/sushi-itoga-vancouver?osq=sushi" class="js-analytics-click" data-analytics-label="biz-photo">
+                                                            <img alt="Sushi Itoga" class="photo-box-img" height="90" src="https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/90s.jpg" srcset="https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/180s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/ms.jpg 1.11x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/120s.jpg 1.33x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/168s.jpg 1.87x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/ls.jpg 2.78x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/258s.jpg 2.87x" width="90">
+
+                                                        </a>
+
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="media-story">
+                                                    <h3 class="search-result-title">
+                                    <span class="indexed-biz-name">1.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/sushi-itoga-vancouver?osq=sushi" data-hovercard-id="nv-_V7qyVmif5gIKA3yMpw"><span><span class="highlighted">Sushi</span> Itoga</span></a>
+</span>
+
+
+                                                    </h3>
+
+                                                    <div class="biz-rating biz-rating-large clearfix">
+
+
+
+
+                                                        <div class="i-stars i-stars--regular-4-half rating-large" title="4.5 star rating">
+                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.5 star rating">
+                                                        </div>
+
+
+                                                        <span class="review-count rating-qualifier">
+            284 reviews
+    </span>
+
+                                                    </div>
+
+
+                                                    <div class="price-category">
+                <span class="bullet-after">
+
+        <span class="business-attribute price-range">$$</span>
+        </span>
+                                                        <span class="category-str-list">
+                    <a href="/search?cflt=sushi&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Sushi Bars</a>,
+                    <a href="/search?cflt=japanese&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Japanese</a>
+    </span>
+
+
+                                                    </div>
+
+
+
+
+                                                    <ul class="search-result_tags">
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="secondary-attributes">
+                            <span class="neighborhood-str-list">
+            West End        </span>
+
+                                            <address>
+                                                1668 Robson Street<br>Vancouver, BC V6G 1C7
+                                            </address>
+
+
+
+                                            <span class="offscreen">Phone number</span>
+                                            <span class="biz-phone">
+        (604) 687-2422
+    </span>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="snippet-block media-block">
+                                        <div class="media-avatar">
+                                            <div class="photo-box pb-30s" data-hovercard-id="6GGt_Fa79cVIBqQOZREYcw">
+                                                <a href="/user_details?userid=eR1CZx03llpP772vYfm0Rg">
+                                                    <img alt="Michelle L." class="photo-box-img" height="30" src="https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/30s.jpg" srcset="https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/60s.jpg 2.00x,https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/90s.jpg 3.00x,https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/ss.jpg 1.33x" width="30">
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="media-story">
+                                            <p class="snippet">
+                                                <span class="highlighted">Sushi</span> Itoga was the cheapest good quality <span class="highlighted">sushi</span> I've had outside of Japan. Generous portions and very reasonable to boot. Get here early or at an odd hour because this place gets…
+                                                <a href="/biz/sushi-itoga-vancouver?hrid=wUn5go7akmpOGj9brESBpg&amp;osq=sushi" class="nowrap">read more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </li>
+                            <li class="regular-search-result">
+                                <div class="search-result natural-search-result" data-biz-id="I0r8kMimYW2BY6lINcZRFA" data-key="2" data-component-bound="true">
+                                    <div class="biz-listing-large">
+                                        <div class="main-attributes">
+                                            <div class="media-block media-block--12">
+                                                <div class="media-avatar">
+                                                    <div class="photo-box pb-90s">
+                                                        <a href="/biz/kishimoto-japanese-kitchen-vancouver?osq=sushi" class="js-analytics-click" data-analytics-label="biz-photo">
+                                                            <img alt="Kishimoto Japanese Kitchen" class="photo-box-img" height="90" src="https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/90s.jpg" srcset="https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/180s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/ms.jpg 1.11x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/120s.jpg 1.33x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/168s.jpg 1.87x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/ls.jpg 2.78x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/258s.jpg 2.87x" width="90">
+
+                                                        </a>
+
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="media-story">
+                                                    <h3 class="search-result-title">
+                                    <span class="indexed-biz-name">2.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/kishimoto-japanese-kitchen-vancouver?osq=sushi" data-hovercard-id="jUVv42L7y0ygPxziMgMfww"><span>Kishimoto Japanese Kitchen</span></a>
+</span>
+
+
+                                                    </h3>
+
+                                                    <div class="biz-rating biz-rating-large clearfix">
+
+
+
+
+                                                        <div class="i-stars i-stars--regular-4-half rating-large" title="4.5 star rating">
+                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.5 star rating">
+                                                        </div>
+
+
+                                                        <span class="review-count rating-qualifier">
+            333 reviews
+    </span>
+
+                                                    </div>
+
+
+                                                    <div class="price-category">
+                <span class="bullet-after">
+
+        <span class="business-attribute price-range">$$</span>
+        </span>
+                                                        <span class="category-str-list">
+                    <a href="/search?cflt=japanese&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Japanese</a>,
+                    <a href="/search?cflt=sushi&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Sushi Bars</a>
+    </span>
+
+
+                                                    </div>
+
+
+
+
+                                                    <ul class="search-result_tags">
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="secondary-attributes">
+                            <span class="neighborhood-str-list">
+            The Drive, Grandview-Woodlands        </span>
+
+                                            <address>
+                                                2054 Commercial Drive<br>Vancouver, BC V5N 4A9
+                                            </address>
+
+
+
+                                            <span class="offscreen">Phone number</span>
+                                            <span class="biz-phone">
+        (604) 255-5550
+    </span>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="snippet-block media-block">
+                                        <div class="media-avatar">
+                                            <div class="photo-box pb-30s" data-hovercard-id="t5Z09qIQ7XAQn2WOvAqkQw">
+                                                <a href="/user_details?userid=j1Ojzn3KCxlcbiqZrrLpcg">
+                                                    <img alt="J C." class="photo-box-img" height="30" src="https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/30s.jpg" srcset="https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/60s.jpg 2.00x,https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/90s.jpg 3.00x,https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/ss.jpg 1.33x" width="30">
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="media-story">
+                                            <p class="snippet">
+                                                My go -to japanese place when I am ready to wait in line for an hour. On most days it is worth it. What to order: Salmon oshi <span class="highlighted">sushi</span> Unagi oshi <span class="highlighted">sushi</span> Nasu dengaku Chicken karraage…
+                                                <a href="/biz/kishimoto-japanese-kitchen-vancouver?hrid=GlJhGyQDF8we5RF96KBxvA&amp;osq=sushi" class="nowrap">read more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </li>
+                            <li class="regular-search-result">
+                                <div class="search-result natural-search-result" data-biz-id="as2xQt48ltKKDUQbMCBrMw" data-key="3" data-component-bound="true">
+                                    <div class="biz-listing-large">
+                                        <div class="main-attributes">
+                                            <div class="media-block media-block--12">
+                                                <div class="media-avatar">
+                                                    <div class="photo-box pb-90s">
+                                                        <a href="/biz/shizen-ya-vancouver?osq=sushi" class="js-analytics-click" data-analytics-label="biz-photo">
+                                                            <img alt="Shizen Ya" class="photo-box-img" height="90" src="https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/90s.jpg" srcset="https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/180s.jpg 2.00x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/ms.jpg 1.11x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/120s.jpg 1.33x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/168s.jpg 1.87x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/ls.jpg 2.78x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/258s.jpg 2.87x" width="90">
+
+                                                        </a>
+
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="media-story">
+                                                    <h3 class="search-result-title">
+                                    <span class="indexed-biz-name">3.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/shizen-ya-vancouver?osq=sushi" data-hovercard-id="JFJl7eJ5-Z2LodZffHDcVw"><span>Shizen Ya</span></a>
+</span>
+
+
+                                                    </h3>
+
+                                                    <div class="biz-rating biz-rating-large clearfix">
+
+
+
+
+                                                        <div class="i-stars i-stars--regular-4 rating-large" title="4.0 star rating">
+                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.0 star rating">
+                                                        </div>
+
+
+                                                        <span class="review-count rating-qualifier">
+            448 reviews
+    </span>
+
+                                                    </div>
+
+
+                                                    <div class="price-category">
+                <span class="bullet-after">
+
+        <span class="business-attribute price-range">$$</span>
+        </span>
+                                                        <span class="category-str-list">
+                    <a href="/search?cflt=japanese&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Japanese</a>,
+                    <a href="/search?cflt=sushi&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Sushi Bars</a>,
+                    <a href="/search?cflt=bars&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Bars</a>
+    </span>
+
+
+                                                    </div>
+
+
+
+
+                                                    <ul class="search-result_tags">
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="secondary-attributes">
+                            <span class="neighborhood-str-list">
+            Downtown        </span>
+
+                                            <address>
+                                                965 Hornby Street<br>Vancouver, BC V6Z 1V3
+                                            </address>
+
+
+
+                                            <span class="offscreen">Phone number</span>
+                                            <span class="biz-phone">
+        (604) 568-0013
+    </span>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="snippet-block media-block">
+                                        <div class="media-avatar">
+                                            <div class="photo-box pb-30s" data-hovercard-id="ZbHNp3GbdP0uXPQZfr5-VA">
+                                                <a href="/user_details?userid=ckG7-tdMfxiukdA4jEnE1Q">
+                                                    <img alt="Issabelle F." class="photo-box-img" height="30" src="https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/30s.jpg" srcset="https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/60s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/90s.jpg 3.00x,https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/ss.jpg 1.33x" width="30">
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="media-story">
+                                            <p class="snippet">
+                                                It's no secret that Vancouver has some world-class <span class="highlighted">sushi</span>. So when my colleague came to visit me she requested that we have <span class="highlighted">sushi</span> the first night she was in town. I wanted to find a…
+                                                <a href="/biz/shizen-ya-vancouver?hrid=MT4Hnc5IRNpun-CVp-75mQ&amp;osq=sushi" class="nowrap">read more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="column column-beta" style="text-align: center">
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 400px;height: 200px;border: dashed;overflow: scroll">
+                    <h2 style="transform: translate(0, 100px)">Drag restaurant here to compare</h2>
+                </div>
+                <div style="width: 400px;height: 200px;border: dashed">
+                    <h2 style="transform: translate(0, 100px)">Drag restaurant here to compare</h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
