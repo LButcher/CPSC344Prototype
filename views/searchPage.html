@@ -8,8 +8,25 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
     <script src="./js/SearchResults.js"></script>
 
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+
 </head>
-<body onload="loadPage()">
+<body onload="loadPage()" ng-app="Comparison">
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+<script src="./js/ComparisonController.js"></script>
+
 
 <div class="main-header main-content-wrap js-main-header webview-hidden">
     <div class="main-header_wrapper">
@@ -239,7 +256,7 @@
     </div>
 </div>
 
-<div class="content-container">
+<div class="content-container" ng-controller="MainCtrl">
     <div class="container">
         <div class="clearfix layout-block layout-a scroll-map-container search-results-block">
             <div class="column column-alpha">
@@ -329,11 +346,11 @@
                 <div id="div2" class="compareDiv" ondrop="drop(event,'bottom')" ondragover="allowDrop(event)" style="width: 400px;height: 200px;border: dashed;overflow: scroll">
                 </div>
                 <div style="width:400px;text-align: right">
-                    <button>
-                        <a href="searchPage.html">Reset Choices</a>
-                    </button>
-                    <button>Compare Choices</button>
 
+                    <md-button class="md-raised md-primary">
+                        <a style="color:white" href="searchPage.html">Reset Choices</a>
+                    </md-button>
+                    <md-button ng-click="openDialog()" class="md-raised md-primary">Compare Choices</md-button>
                 </div>
 
             </div>

@@ -27,8 +27,7 @@ function drop(ev,loc) {
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
-        option1=document.getElementById("div1").innerHTML
-        console.log(data)
+        option1=data
         option1Taken=true
     }
     else if(!option2Taken&&loc=='bottom') {
@@ -36,8 +35,7 @@ function drop(ev,loc) {
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
-        option1=document.getElementById("div2").innerHTML
-        console.log(data)
+        option2=data
         option2Taken=true
     }
 }
@@ -57,4 +55,9 @@ function loadResults(type){
         document.getElementById("resultsLocCafe").style.display='block'
         window.sessionStorage.setItem("searchTerm",'cafe')
     }
+}
+
+function compareChoices(){
+    console.log(option1)
+    console.log(option2)
 }
