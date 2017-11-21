@@ -10,3 +10,27 @@
 .compareDiv{
   background: url('../img/dropText.png') no-repeat center center scroll;
 }
+
+.searchRes{
+  border:dashed;
+  overflow:hidden
+}
+
+.searchImg {
+  margin:5px
+}
+
+.comparisonTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: red;
+  color: white;
+  font-size: 26px;
+}
+
+.comparisonTable td{
+  border: 1px solid black;
+  padding: 8px;
+  font-size: 20px
+}

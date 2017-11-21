@@ -8,7 +8,47 @@ var option2Taken = false
 var option1 =null
 var option2 =null
 
+var info = {
+    'sushi1' : {
+        'name': 'Sushi Itoga',
+        'rating': 4.5,
+        'price': '$$',
+        'distance': 12
+    },
+    'sushi2' : {
+        'name': 'Kishimoto Japanese Kitchen',
+        'rating': 4.5,
+        'price': '$$',
+        'distance': 15
+    },
+    'sushi3' : {
+        'name': 'Shizen Ya',
+        'rating': 4,
+        'price': '$$',
+        'distance': 5
+    },
+    'cafe1' : {
+        'name': 'The Only Cafe',
+        'rating': 4.5,
+        'price': '$',
+        'distance': 2
+    },
+    'cafe2' : {
+        'name': 'Revolver',
+        'rating': 4.5,
+        'price': '$$',
+        'distance': 10
+    },
+    'cafe3' : {
+        'name': 'Porto Cafe',
+        'rating': 4,
+        'price': '$',
+        'distance': 5
+    }
+}
+
 var searchTerm = window.sessionStorage.getItem("searchTerm")
+
 
 
 //From w3 Schools
