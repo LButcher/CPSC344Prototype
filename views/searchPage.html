@@ -5,6 +5,7 @@
     <title>Title</title>
 
     <link href="css/www-pkg.css" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
     <script src="./js/SearchResults.js"></script>
 
 </head>
@@ -40,11 +41,11 @@
                                                         <span class="pseudo-input_field-holder" style="position: relative; display: block;"
                                                               data-component-bound="true">
 
-                                        <a href="searchPage.html">
+                                        <a onclick="loadResults('sushi')">
                                             Sushi
                                         </a>
                                         or
-                                        <a href="searchPage.html">
+                                        <a onclick="loadResults('cafe')">
                                             Cafe
                                         </a>
                             </span>
@@ -244,260 +245,55 @@
             <div class="column column-alpha">
                 <div class="results-wrapper indexed-biz-archive" style="position: relative; min-height: 345px;">
                     <div class="search-results-content">
-                        <ul class="ylist ylist-bordered search-results">
-                            <li id="sushi1" draggable="true" ondragstart="drag(event)" class="regular-search-result">
-                                <div class="search-result natural-search-result" data-biz-id="JeDerIcvQsgd9q6aKXlUjw" data-key="1" data-component-bound="true">
+                        <ul id="resultsLocSushi" class="ylist ylist-bordered search-results">
+                            <li class="regular-search-result">
+                                <div draggable="false" class="search-result natural-search-result"
+                                     data-biz-id="JeDerIcvQsgd9q6aKXlUjw" data-key="1" data-component-bound="true">
                                     <div class="biz-listing-large">
-                                        <div class="main-attributes">
-                                            <div class="media-block media-block--12">
-                                                <div class="media-avatar">
-                                                    <div class="photo-box pb-90s">
-                                                        <a href="/biz/sushi-itoga-vancouver?osq=sushi" class="js-analytics-click" data-analytics-label="biz-photo">
-                                                            <img alt="Sushi Itoga" class="photo-box-img" height="90" src="https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/90s.jpg" srcset="https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/180s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/ms.jpg 1.11x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/120s.jpg 1.33x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/168s.jpg 1.87x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/ls.jpg 2.78x,https://s3-media2.fl.yelpcdn.com/bphoto/28UFQCykE0_gK8XJVCFdJw/258s.jpg 2.87x" width="90">
-
-                                                        </a>
-
-                                                    </div>
-
-
-
-
-                                                </div>
-                                                <div class="media-story">
-                                                    <h3 class="search-result-title">
-                                    <span class="indexed-biz-name">1.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/sushi-itoga-vancouver?osq=sushi" data-hovercard-id="nv-_V7qyVmif5gIKA3yMpw"><span><span class="highlighted">Sushi</span> Itoga</span></a>
-</span>
-
-
-                                                    </h3>
-
-                                                    <div class="biz-rating biz-rating-large clearfix">
-
-
-
-
-                                                        <div class="i-stars i-stars--regular-4-half rating-large" title="4.5 star rating">
-                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.5 star rating">
-                                                        </div>
-
-
-                                                        <span class="review-count rating-qualifier">
-            284 reviews
-    </span>
-
-                                                    </div>
-
-
-                                                    <div class="price-category">
-                <span class="bullet-after">
-
-        <span class="business-attribute price-range">$$</span>
-        </span>
-                                                        <span class="category-str-list">
-                    <a href="/search?cflt=sushi&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Sushi Bars</a>,
-                    <a href="/search?cflt=japanese&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Japanese</a>
-    </span>
-
-
-                                                    </div>
-
-
-
-
-                                                    <ul class="search-result_tags">
-                                                    </ul>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="secondary-attributes">
-                            <span class="neighborhood-str-list">
-            West End        </span>
-
-                                            <address>
-                                                1668 Robson Street<br>Vancouver, BC V6G 1C7
-                                            </address>
-
-
-
-                                            <span class="offscreen">Phone number</span>
-                                            <span class="biz-phone">
-        (604) 687-2422
-    </span>
-
-                                        </div>
+                                        <img id="sushi1" draggable="true" ondragstart="drag(event)"
+                                             src="./img/sushi1.png">
                                     </div>
-
-
-
-
-
-
-
-
-                                    <div class="snippet-block media-block">
-                                        <div class="media-avatar">
-                                            <div class="photo-box pb-30s" data-hovercard-id="6GGt_Fa79cVIBqQOZREYcw">
-                                                <a href="/user_details?userid=eR1CZx03llpP772vYfm0Rg">
-                                                    <img alt="Michelle L." class="photo-box-img" height="30" src="https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/30s.jpg" srcset="https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/60s.jpg 2.00x,https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/90s.jpg 3.00x,https://s3-media1.fl.yelpcdn.com/photo/BO-XPTmKDuwfgsxwV6H6Tw/ss.jpg 1.33x" width="30">
-
-                                                </a>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="media-story">
-                                            <p class="snippet">
-                                                <span class="highlighted">Sushi</span> Itoga was the cheapest good quality <span class="highlighted">sushi</span> I've had outside of Japan. Generous portions and very reasonable to boot. Get here early or at an odd hour because this place gets…
-                                                <a href="/biz/sushi-itoga-vancouver?hrid=wUn5go7akmpOGj9brESBpg&amp;osq=sushi" class="nowrap">read more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-
-
-
-
                                 </div>
                             </li>
                             <li class="regular-search-result">
-                                <div class="search-result natural-search-result" data-biz-id="I0r8kMimYW2BY6lINcZRFA" data-key="2" data-component-bound="true">
+                                <div class="search-result natural-search-result" data-biz-id="I0r8kMimYW2BY6lINcZRFA"
+                                     data-key="2" data-component-bound="true">
                                     <div class="biz-listing-large">
-                                        <div class="main-attributes">
-                                            <div class="media-block media-block--12">
-                                                <div class="media-avatar">
-                                                    <div class="photo-box pb-90s">
-                                                        <a href="/biz/kishimoto-japanese-kitchen-vancouver?osq=sushi" class="js-analytics-click" data-analytics-label="biz-photo">
-                                                            <img alt="Kishimoto Japanese Kitchen" class="photo-box-img" height="90" src="https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/90s.jpg" srcset="https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/180s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/ms.jpg 1.11x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/120s.jpg 1.33x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/168s.jpg 1.87x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/ls.jpg 2.78x,https://s3-media2.fl.yelpcdn.com/bphoto/LCDOUSBHJU1X4Dp5NAJzFg/258s.jpg 2.87x" width="90">
 
-                                                        </a>
-
-                                                    </div>
-
-
-
-
-                                                </div>
-                                                <div class="media-story">
-                                                    <h3 class="search-result-title">
-                                    <span class="indexed-biz-name">2.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/kishimoto-japanese-kitchen-vancouver?osq=sushi" data-hovercard-id="jUVv42L7y0ygPxziMgMfww"><span>Kishimoto Japanese Kitchen</span></a>
-</span>
-
-
-                                                    </h3>
-
-                                                    <div class="biz-rating biz-rating-large clearfix">
-
-
-
-
-                                                        <div class="i-stars i-stars--regular-4-half rating-large" title="4.5 star rating">
-                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.5 star rating">
-                                                        </div>
-
-
-                                                        <span class="review-count rating-qualifier">
-            333 reviews
-    </span>
-
-                                                    </div>
-
-
-                                                    <div class="price-category">
-                <span class="bullet-after">
-
-        <span class="business-attribute price-range">$$</span>
-        </span>
-                                                        <span class="category-str-list">
-                    <a href="/search?cflt=japanese&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Japanese</a>,
-                    <a href="/search?cflt=sushi&amp;find_desc=sushi&amp;find_loc=Vancouver%2C+BC">Sushi Bars</a>
-    </span>
-
-
-                                                    </div>
-
-
-
-
-                                                    <ul class="search-result_tags">
-                                                    </ul>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="secondary-attributes">
-                            <span class="neighborhood-str-list">
-            The Drive, Grandview-Woodlands        </span>
-
-                                            <address>
-                                                2054 Commercial Drive<br>Vancouver, BC V5N 4A9
-                                            </address>
-
-
-
-                                            <span class="offscreen">Phone number</span>
-                                            <span class="biz-phone">
-        (604) 255-5550
-    </span>
-
-                                        </div>
+                                        <img id="sushi2" draggable="true" ondragstart="drag(event)"
+                                             src="./img/sushi2.png">
                                     </div>
-
-
-
-
-
-
-
-
-                                    <div class="snippet-block media-block">
-                                        <div class="media-avatar">
-                                            <div class="photo-box pb-30s" data-hovercard-id="t5Z09qIQ7XAQn2WOvAqkQw">
-                                                <a href="/user_details?userid=j1Ojzn3KCxlcbiqZrrLpcg">
-                                                    <img alt="J C." class="photo-box-img" height="30" src="https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/30s.jpg" srcset="https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/60s.jpg 2.00x,https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/90s.jpg 3.00x,https://s3-media3.fl.yelpcdn.com/photo/6f7PswkCq393Ulmg4fMFrQ/ss.jpg 1.33x" width="30">
-
-                                                </a>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="media-story">
-                                            <p class="snippet">
-                                                My go -to japanese place when I am ready to wait in line for an hour. On most days it is worth it. What to order: Salmon oshi <span class="highlighted">sushi</span> Unagi oshi <span class="highlighted">sushi</span> Nasu dengaku Chicken karraage…
-                                                <a href="/biz/kishimoto-japanese-kitchen-vancouver?hrid=GlJhGyQDF8we5RF96KBxvA&amp;osq=sushi" class="nowrap">read more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-
-
-
-
                                 </div>
 
 
                             </li>
                             <li class="regular-search-result">
-                                <div class="search-result natural-search-result" data-biz-id="as2xQt48ltKKDUQbMCBrMw" data-key="3" data-component-bound="true">
+                                <div class="search-result natural-search-result" data-biz-id="as2xQt48ltKKDUQbMCBrMw"
+                                     data-key="3" data-component-bound="true">
                                     <div class="biz-listing-large">
                                         <div class="main-attributes">
                                             <div class="media-block media-block--12">
                                                 <div class="media-avatar">
                                                     <div class="photo-box pb-90s">
-                                                        <a href="/biz/shizen-ya-vancouver?osq=sushi" class="js-analytics-click" data-analytics-label="biz-photo">
-                                                            <img alt="Shizen Ya" class="photo-box-img" height="90" src="https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/90s.jpg" srcset="https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/180s.jpg 2.00x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/ms.jpg 1.11x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/120s.jpg 1.33x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/168s.jpg 1.87x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/ls.jpg 2.78x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/258s.jpg 2.87x" width="90">
+                                                        <a href="/biz/shizen-ya-vancouver?osq=sushi"
+                                                           class="js-analytics-click" data-analytics-label="biz-photo">
+                                                            <img alt="Shizen Ya" class="photo-box-img" height="90"
+                                                                 src="https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/90s.jpg"
+                                                                 srcset="https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/180s.jpg 2.00x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/ms.jpg 1.11x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/120s.jpg 1.33x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/168s.jpg 1.87x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/ls.jpg 2.78x,https://s3-media4.fl.yelpcdn.com/bphoto/C_r14H_IV5HXWtT56GkJdA/258s.jpg 2.87x"
+                                                                 width="90">
 
                                                         </a>
 
                                                     </div>
 
 
-
-
                                                 </div>
                                                 <div class="media-story">
                                                     <h3 class="search-result-title">
-                                    <span class="indexed-biz-name">3.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/shizen-ya-vancouver?osq=sushi" data-hovercard-id="JFJl7eJ5-Z2LodZffHDcVw"><span>Shizen Ya</span></a>
+                                    <span class="indexed-biz-name">3.         <a class="biz-name js-analytics-click"
+                                                                                 data-analytics-label="biz-name"
+                                                                                 href="/biz/shizen-ya-vancouver?osq=sushi"
+                                                                                 data-hovercard-id="JFJl7eJ5-Z2LodZffHDcVw"><span>Shizen Ya</span></a>
 </span>
 
 
@@ -506,10 +302,11 @@
                                                     <div class="biz-rating biz-rating-large clearfix">
 
 
-
-
-                                                        <div class="i-stars i-stars--regular-4 rating-large" title="4.0 star rating">
-                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.0 star rating">
+                                                        <div class="i-stars i-stars--regular-4 rating-large"
+                                                             title="4.0 star rating">
+                                                            <img class="offscreen" height="303"
+                                                                 src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png"
+                                                                 width="84" alt="4.0 star rating">
                                                         </div>
 
 
@@ -535,8 +332,6 @@
                                                     </div>
 
 
-
-
                                                     <ul class="search-result_tags">
                                                     </ul>
 
@@ -553,10 +348,129 @@
                                             </address>
 
 
-
                                             <span class="offscreen">Phone number</span>
                                             <span class="biz-phone">
         (604) 568-0013
+    </span>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="snippet-block media-block">
+                                        <div class="media-avatar">
+                                            <div class="photo-box pb-30s" data-hovercard-id="ZbHNp3GbdP0uXPQZfr5-VA">
+                                                <a href="/user_details?userid=ckG7-tdMfxiukdA4jEnE1Q">
+                                                    <img alt="Issabelle F." class="photo-box-img" height="30"
+                                                         src="https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/30s.jpg"
+                                                         srcset="https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/60s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/90s.jpg 3.00x,https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/ss.jpg 1.33x"
+                                                         width="30">
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="media-story">
+                                            <p class="snippet">
+                                                It's no secret that Vancouver has some world-class <span
+                                                    class="highlighted">sushi</span>. So when my colleague came to visit
+                                                me she requested that we have <span class="highlighted">sushi</span> the
+                                                first night she was in town. I wanted to find a…
+                                                <a href="/biz/shizen-ya-vancouver?hrid=MT4Hnc5IRNpun-CVp-75mQ&amp;osq=sushi"
+                                                   class="nowrap">read more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </li>
+                        </ul>
+
+                        <ul id="resultsLocCafe" class="ylist ylist-bordered search-results">
+                            <li class="regular-search-result">
+                                <div class="search-result natural-search-result" data-biz-id="_o4eCCseSJDd4fJjG1TV8A" data-key="1" data-component-bound="true">
+                                    <div class="biz-listing-large">
+                                        <div class="main-attributes">
+                                            <div class="media-block media-block--12">
+                                                <div class="media-avatar">
+                                                    <div class="photo-box pb-90s">
+                                                        <a href="/biz/the-only-cafe-vancouver?osq=cafe" class="js-analytics-click" data-analytics-label="biz-photo">
+                                                            <img alt="The Only Cafe" class="photo-box-img" height="90" src="https://s3-media3.fl.yelpcdn.com/bphoto/DA_PuV9ejoE7o7hcpf63kQ/90s.jpg" srcset="https://s3-media3.fl.yelpcdn.com/bphoto/DA_PuV9ejoE7o7hcpf63kQ/180s.jpg 2.00x,https://s3-media3.fl.yelpcdn.com/bphoto/DA_PuV9ejoE7o7hcpf63kQ/ms.jpg 1.11x,https://s3-media3.fl.yelpcdn.com/bphoto/DA_PuV9ejoE7o7hcpf63kQ/120s.jpg 1.33x,https://s3-media3.fl.yelpcdn.com/bphoto/DA_PuV9ejoE7o7hcpf63kQ/168s.jpg 1.87x,https://s3-media3.fl.yelpcdn.com/bphoto/DA_PuV9ejoE7o7hcpf63kQ/ls.jpg 2.78x,https://s3-media3.fl.yelpcdn.com/bphoto/DA_PuV9ejoE7o7hcpf63kQ/258s.jpg 2.87x" width="90">
+
+                                                        </a>
+
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="media-story">
+                                                    <h3 class="search-result-title">
+                                    <span class="indexed-biz-name">1.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/the-only-cafe-vancouver?osq=cafe" data-hovercard-id="tHO6geczfhmvmS0Jc409-w"><span>The Only <span class="highlighted">Cafe</span></span></a>
+</span>
+
+
+                                                    </h3>
+
+                                                    <div class="biz-rating biz-rating-large clearfix">
+
+
+
+
+                                                        <div class="i-stars i-stars--regular-4-half rating-large" title="4.5 star rating">
+                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.5 star rating">
+                                                        </div>
+
+
+                                                        <span class="review-count rating-qualifier">
+            44 reviews
+    </span>
+
+                                                    </div>
+
+
+                                                    <div class="price-category">
+                <span class="bullet-after">
+
+        <span class="business-attribute price-range">$</span>
+        </span>
+                                                        <span class="category-str-list">
+                    <a href="/search?cflt=coffee&amp;find_desc=cafe&amp;find_loc=Vancouver%2C+BC">Coffee &amp; Tea</a>,
+                    <a href="/search?cflt=desserts&amp;find_desc=cafe&amp;find_loc=Vancouver%2C+BC">Desserts</a>,
+                    <a href="/search?cflt=juicebars&amp;find_desc=cafe&amp;find_loc=Vancouver%2C+BC">Juice Bars &amp; Smoothies</a>
+    </span>
+
+
+                                                    </div>
+
+
+
+
+                                                    <ul class="search-result_tags">
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="secondary-attributes">
+                            <span class="neighborhood-str-list">
+            Kitsilano        </span>
+
+                                            <address>
+                                                2678 W 4th Avenue<br>Vancouver, BC V6K 1P7
+                                            </address>
+
+
+
+                                            <span class="offscreen">Phone number</span>
+                                            <span class="biz-phone">
+        (778) 379-3299
     </span>
 
                                         </div>
@@ -571,9 +485,9 @@
 
                                     <div class="snippet-block media-block">
                                         <div class="media-avatar">
-                                            <div class="photo-box pb-30s" data-hovercard-id="ZbHNp3GbdP0uXPQZfr5-VA">
-                                                <a href="/user_details?userid=ckG7-tdMfxiukdA4jEnE1Q">
-                                                    <img alt="Issabelle F." class="photo-box-img" height="30" src="https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/30s.jpg" srcset="https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/60s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/90s.jpg 3.00x,https://s3-media2.fl.yelpcdn.com/photo/cdDmg40jj2QARs7pOPkSHw/ss.jpg 1.33x" width="30">
+                                            <div class="photo-box pb-30s" data-hovercard-id="tnJoR1aw5fsn4n77Lu4vMg">
+                                                <a href="/user_details?userid=thqNHm0GQe1Bn8LmRSWddA">
+                                                    <img alt="Joseph H." class="photo-box-img" height="30" src="https://s3-media2.fl.yelpcdn.com/photo/sTQkS3AOOqKJfusKVNlhAw/30s.jpg" srcset="https://s3-media2.fl.yelpcdn.com/photo/sTQkS3AOOqKJfusKVNlhAw/60s.jpg 2.00x,https://s3-media2.fl.yelpcdn.com/photo/sTQkS3AOOqKJfusKVNlhAw/90s.jpg 3.00x,https://s3-media2.fl.yelpcdn.com/photo/sTQkS3AOOqKJfusKVNlhAw/ss.jpg 1.33x" width="30">
 
                                                 </a>
 
@@ -582,8 +496,241 @@
                                         </div>
                                         <div class="media-story">
                                             <p class="snippet">
-                                                It's no secret that Vancouver has some world-class <span class="highlighted">sushi</span>. So when my colleague came to visit me she requested that we have <span class="highlighted">sushi</span> the first night she was in town. I wanted to find a…
-                                                <a href="/biz/shizen-ya-vancouver?hrid=MT4Hnc5IRNpun-CVp-75mQ&amp;osq=sushi" class="nowrap">read more</a>
+                                                Not sure why so many reviews are "not recommended". I'd say all those reviews were spot on about this place. There are probably 4-5 <span class="highlighted">cafes</span> in this area, there's 3 right on this block.…
+                                                <a href="/biz/the-only-cafe-vancouver?hrid=EnbvteZ8Q6sdtunQO2PKAw&amp;osq=cafe" class="nowrap">read more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </li>
+                            <li class="regular-search-result">
+                                <div class="search-result natural-search-result" data-biz-id="dX6y4zA-1AtWsYnT4AZXNg" data-key="2" data-component-bound="true">
+                                    <div class="biz-listing-large">
+                                        <div class="main-attributes">
+                                            <div class="media-block media-block--12">
+                                                <div class="media-avatar">
+                                                    <div class="photo-box pb-90s">
+                                                        <a href="/biz/revolver-vancouver?osq=cafe" class="js-analytics-click" data-analytics-label="biz-photo">
+                                                            <img alt="Revolver" class="photo-box-img" height="90" src="https://s3-media1.fl.yelpcdn.com/bphoto/RNcD3LjMpA-5LXKgW0rTDA/90s.jpg" srcset="https://s3-media1.fl.yelpcdn.com/bphoto/RNcD3LjMpA-5LXKgW0rTDA/180s.jpg 2.00x,https://s3-media1.fl.yelpcdn.com/bphoto/RNcD3LjMpA-5LXKgW0rTDA/ms.jpg 1.11x,https://s3-media1.fl.yelpcdn.com/bphoto/RNcD3LjMpA-5LXKgW0rTDA/120s.jpg 1.33x,https://s3-media1.fl.yelpcdn.com/bphoto/RNcD3LjMpA-5LXKgW0rTDA/168s.jpg 1.87x,https://s3-media1.fl.yelpcdn.com/bphoto/RNcD3LjMpA-5LXKgW0rTDA/ls.jpg 2.78x,https://s3-media1.fl.yelpcdn.com/bphoto/RNcD3LjMpA-5LXKgW0rTDA/258s.jpg 2.87x" width="90">
+
+                                                        </a>
+
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="media-story">
+                                                    <h3 class="search-result-title">
+                                    <span class="indexed-biz-name">2.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/revolver-vancouver?osq=cafe" data-hovercard-id="sy0Ue1qM9TYK3EI1Ul1o4Q"><span>Revolver</span></a>
+</span>
+
+
+                                                    </h3>
+
+                                                    <div class="biz-rating biz-rating-large clearfix">
+
+
+
+
+                                                        <div class="i-stars i-stars--regular-4-half rating-large" title="4.5 star rating">
+                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.5 star rating">
+                                                        </div>
+
+
+                                                        <span class="review-count rating-qualifier">
+            414 reviews
+    </span>
+
+                                                    </div>
+
+
+                                                    <div class="price-category">
+                <span class="bullet-after">
+
+        <span class="business-attribute price-range">$$</span>
+        </span>
+                                                        <span class="category-str-list">
+                    <a href="/search?cflt=coffee&amp;find_desc=cafe&amp;find_loc=Vancouver%2C+BC">Coffee &amp; Tea</a>
+    </span>
+
+
+                                                    </div>
+
+
+
+
+                                                    <ul class="search-result_tags">
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="secondary-attributes">
+                            <span class="neighborhood-str-list">
+            Gastown, Downtown        </span>
+
+                                            <address>
+                                                325 Cambie Street<br>Vancouver, BC V6B 1H7
+                                            </address>
+
+
+
+                                            <span class="offscreen">Phone number</span>
+                                            <span class="biz-phone">
+        (604) 558-4444
+    </span>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="snippet-block media-block">
+                                        <div class="media-avatar">
+                                            <div class="photo-box pb-30s" data-hovercard-id="IX-SlveqHE18hULzkTLhKg">
+                                                <a href="/user_details?userid=d-P3a_i8mcMNIgZPGrW8jA">
+                                                    <img alt="Willow B." class="photo-box-img" height="30" src="https://s3-media4.fl.yelpcdn.com/photo/VHV2UmV47rRkkT2JLpyQaw/30s.jpg" srcset="https://s3-media4.fl.yelpcdn.com/photo/VHV2UmV47rRkkT2JLpyQaw/60s.jpg 2.00x,https://s3-media4.fl.yelpcdn.com/photo/VHV2UmV47rRkkT2JLpyQaw/90s.jpg 3.00x,https://s3-media4.fl.yelpcdn.com/photo/VHV2UmV47rRkkT2JLpyQaw/ss.jpg 1.33x" width="30">
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="media-story">
+                                            <p class="snippet">
+                                                Coffee is well done, service is attentive, sweets are pretty average. There is minimal seating and they are busy, be prepared to wait for a table (and don't get it to go). This <span class="highlighted">cafe…</span>
+                                                <a href="/biz/revolver-vancouver?hrid=b1_074QW9szrz8GQQROvWQ&amp;osq=cafe" class="nowrap">read more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </li>
+                            <li class="regular-search-result">
+                                <div class="search-result natural-search-result" data-biz-id="65ZxYdrwbL23j0uV5xXTDA" data-key="3">
+                                    <div class="biz-listing-large">
+                                        <div class="main-attributes">
+                                            <div class="media-block media-block--12">
+                                                <div class="media-avatar">
+                                                    <div class="photo-box pb-90s">
+                                                        <a href="/biz/porto-cafe-vancouver?osq=cafe" class="js-analytics-click" data-analytics-label="biz-photo">
+                                                            <img alt="Porto Cafe" class="photo-box-img" height="90" src="https://s3-media3.fl.yelpcdn.com/bphoto/2t9i7DTmFsco74uu4AiMZA/90s.jpg" srcset="https://s3-media3.fl.yelpcdn.com/bphoto/2t9i7DTmFsco74uu4AiMZA/180s.jpg 2.00x,https://s3-media3.fl.yelpcdn.com/bphoto/2t9i7DTmFsco74uu4AiMZA/ms.jpg 1.11x,https://s3-media3.fl.yelpcdn.com/bphoto/2t9i7DTmFsco74uu4AiMZA/120s.jpg 1.33x,https://s3-media3.fl.yelpcdn.com/bphoto/2t9i7DTmFsco74uu4AiMZA/168s.jpg 1.87x,https://s3-media3.fl.yelpcdn.com/bphoto/2t9i7DTmFsco74uu4AiMZA/ls.jpg 2.78x,https://s3-media3.fl.yelpcdn.com/bphoto/2t9i7DTmFsco74uu4AiMZA/258s.jpg 2.87x" width="90">
+
+                                                        </a>
+
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="media-story">
+                                                    <h3 class="search-result-title">
+                                    <span class="indexed-biz-name">3.         <a class="biz-name js-analytics-click" data-analytics-label="biz-name" href="/biz/porto-cafe-vancouver?osq=cafe" data-hovercard-id="uvkLHnnE1PWRvtPKOcRqng"><span>Porto <span class="highlighted">Cafe</span></span></a>
+</span>
+
+
+                                                    </h3>
+
+                                                    <div class="biz-rating biz-rating-large clearfix">
+
+
+
+
+                                                        <div class="i-stars i-stars--regular-4 rating-large" title="4.0 star rating">
+                                                            <img class="offscreen" height="303" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png" width="84" alt="4.0 star rating">
+                                                        </div>
+
+
+                                                        <span class="review-count rating-qualifier">
+            27 reviews
+    </span>
+
+                                                    </div>
+
+
+                                                    <div class="price-category">
+                <span class="bullet-after">
+
+        <span class="business-attribute price-range">$</span>
+        </span>
+                                                        <span class="category-str-list">
+                    <a href="/search?cflt=coffee&amp;find_desc=cafe&amp;find_loc=Vancouver%2C+BC">Coffee &amp; Tea</a>,
+                    <a href="/search?cflt=breakfast_brunch&amp;find_desc=cafe&amp;find_loc=Vancouver%2C+BC">Breakfast &amp; Brunch</a>
+    </span>
+
+
+                                                    </div>
+
+
+
+
+                                                    <ul class="search-result_tags">
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="secondary-attributes">
+                            <span class="neighborhood-str-list">
+            Fairview Slopes        </span>
+
+                                            <address>
+                                                2207 Cambie Street<br>Vancouver, BC V6B 6J7
+                                            </address>
+
+
+
+                                            <span class="offscreen">Phone number</span>
+                                            <span class="biz-phone">
+        (604) 559-7667
+    </span>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="snippet-block media-block">
+                                        <div class="media-avatar">
+                                            <div class="photo-box pb-30s" data-hovercard-id="TUo9NaRRIDLT8Mk32178ww">
+                                                <a href="/user_details?userid=M0XcDt17Ct-cXOBG5drllg">
+                                                    <img alt="Sharleen L." class="photo-box-img" height="30" src="https://s3-media1.fl.yelpcdn.com/assets/srv0/yelp_styleguide/d53e550ec367/assets/img/default_avatars/user_30_square.png" width="30">
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="media-story">
+                                            <p class="snippet">
+                                                Came here with my bf one day. <span class="highlighted">Cafe</span> is spacious and modern. I ordered a matcha latte with almond milk while my bf had a mocha <span class="highlighted">cafe</span> with soy milk. The barista accidentally made my…
+                                                <a href="/biz/porto-cafe-vancouver?hrid=aJ582bsXrhxZGyuMdUG5YQ&amp;osq=cafe" class="nowrap">read more</a>
                                             </p>
                                         </div>
                                     </div>
@@ -601,11 +748,9 @@
                 </div>
             </div>
             <div class="column column-beta" style="text-align: center">
-                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 400px;height: 200px;border: dashed;overflow: scroll">
-                    <h2 style="transform: translate(0, 100px)">Drag restaurant here to compare</h2>
+                <div id="div1" class="compareDiv" ondrop="drop(event,'top')" ondragover="allowDrop(event)" style="width: 400px;height: 200px;border: dashed;overflow: scroll">
                 </div>
-                <div style="width: 400px;height: 200px;border: dashed">
-                    <h2 style="transform: translate(0, 100px)">Drag restaurant here to compare</h2>
+                <div id="div2" class="compareDiv" ondrop="drop(event,'bottom')" ondragover="allowDrop(event)" style="width: 400px;height: 200px;border: dashed;overflow: scroll">
                 </div>
 
             </div>

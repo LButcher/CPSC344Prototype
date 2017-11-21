@@ -7,4 +7,6 @@
   border: 15px solid black
 }
 
-
+.compareDiv{
+  background: url('../img/dropText.png') no-repeat center center scroll;
+}

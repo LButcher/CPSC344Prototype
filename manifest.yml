@@ -1,5 +1,5 @@
 ---
 applications:
- - name: GetStartedNode
+ - name: CPSC344Prototype
    random-route: true
    memory: 256M
