@@ -7,8 +7,8 @@ var option1Taken = false
 var option2Taken = false
 var option1 =null
 var option2 =null
-var sushi1Html = "<img  id=lsushi2' src='./img/sushi2.png'>"
 
+var searchTerm = window.sessionStorage.getItem("searchTerm")
 
 
 //From w3 Schools
@@ -42,22 +42,19 @@ function drop(ev,loc) {
     }
 }
 
-function updateCompare(){
-    console.log(option1Taken)
-    if(option1!=null){
-        document.getElementById("div1").innerHTML = option1;
-    }
-
+function loadPage(){
+    loadResults(searchTerm)
 }
 
 function loadResults(type){
     if(type=='sushi'){
         document.getElementById("resultsLocCafe").style.display='none'
         document.getElementById("resultsLocSushi").style.display='block'
+        window.sessionStorage.setItem("searchTerm",'sushi')
     }
     else{
         document.getElementById("resultsLocSushi").style.display='none'
         document.getElementById("resultsLocCafe").style.display='block'
-
+        window.sessionStorage.setItem("searchTerm",'cafe')
     }
 }

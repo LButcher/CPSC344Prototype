@@ -4,7 +4,8 @@
 <head>
     <link href="css/homepage-pkg.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./js/HomePage.js"></script>
+
 </head>
 
 <body>
@@ -95,11 +96,11 @@
                                     <span class="pseudo-input_field-holder" style="position: relative; display: block;"
                                           data-component-bound="true">
 
-                                        <a href="searchPage.html">
+                                        <a onclick="setSearchTerm('sushi')" href="searchPage.html">
                                             Sushi
                                         </a>
                                         or
-                                        <a href="searchPage.html">
+                                        <a onclick="setSearchTerm('cafe')" href="searchPage.html">
                                             Cafe
                                         </a>
                             </span>
