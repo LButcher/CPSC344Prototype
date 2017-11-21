@@ -11,7 +11,6 @@ app.use(bodyParser.json())
 
 //serve static file (index.html, images, css)
 app.use(express.static(__dirname + '/views'));
-app.use("/img", express.static('img'));
 app.use("/js", express.static('js'));
 
 
