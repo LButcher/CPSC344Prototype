@@ -13,37 +13,37 @@ var info = {
         'name': 'Sushi Itoga',
         'rating': 4.5,
         'price': '$$',
-        'distance': 12
+        'distance (km)': 12
     },
     'sushi2' : {
         'name': 'Kishimoto Japanese Kitchen',
         'rating': 4.5,
         'price': '$$',
-        'distance': 15
+        'distance (km)': 15
     },
     'sushi3' : {
         'name': 'Shizen Ya',
         'rating': 4,
         'price': '$$',
-        'distance': 5
+        'distance (km)': 5
     },
     'cafe1' : {
         'name': 'The Only Cafe',
         'rating': 4.5,
         'price': '$',
-        'distance': 2
+        'distance (km)': 2
     },
     'cafe2' : {
         'name': 'Revolver',
         'rating': 4.5,
         'price': '$$',
-        'distance': 10
+        'distance (km)': 10
     },
     'cafe3' : {
         'name': 'Porto Cafe',
         'rating': 4,
         'price': '$',
-        'distance': 5
+        'distance (km)': 5
     }
 }
 
@@ -95,9 +95,4 @@ function loadResults(type){
         document.getElementById("resultsLocCafe").style.display='block'
         window.sessionStorage.setItem("searchTerm",'cafe')
     }
-}
-
-function compareChoices(){
-    console.log(option1)
-    console.log(option2)
 }

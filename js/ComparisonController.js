@@ -30,7 +30,10 @@ app.controller("DialogController", function($scope, $mdDialog){
     $scope.option1 = option1
     $scope.option2=option2
 
-    var rating =$scope.rating
+    $scope.rating =true
+    $scope.price =true
+    $scope.distance =true
+
 
     $scope.criteria =[]
 
@@ -48,22 +51,95 @@ app.controller("DialogController", function($scope, $mdDialog){
         else if($scope.price==false && $scope.criteria.indexOf('price')!=-1){
             $scope.criteria.splice($scope.criteria.indexOf('price'),1)
         }
-        if($scope.distance==true && $scope.criteria.indexOf('distance')==-1){
-            $scope.criteria.push('distance')
+        if($scope.distance==true && $scope.criteria.indexOf('distance (km)')==-1){
+            $scope.criteria.push('distance (km)')
         }
-        else if($scope.distance==false && $scope.criteria.indexOf('distance')!=-1){
-            $scope.criteria.splice($scope.criteria.indexOf('distance'),1)
+        else if($scope.distance==false && $scope.criteria.indexOf('distance (km)')!=-1){
+            $scope.criteria.splice($scope.criteria.indexOf('distance (km)'),1)
         }
+
 
 
         console.log("updated")
-        console.log($scope.criteria)
     }
+
+    $scope.highlightBest = function(){
+        var table = document.getElementById('comparisonTable');
+        var rows = table.rows.length;
+        var compTable = {}
+        var criteria = $scope.criteria
+
+        for(var i=1;i<rows;i++){
+            var temp = table.rows[i]
+            compTable[temp.cells[0].innerHTML] =
+                {
+                    'option1': temp.cells[1].innerHTML,
+                    'option2': temp.cells[2].innerHTML
+                }
+                temp.cells[1].id="option1_"+criteria[i-1]
+                temp.cells[2].id="option2_"+criteria[i-1]
+
+        }
+
+        $scope.compTable = compTable
+        $scope.compareCells()
+
+
+    }
+
+    $scope.compareCells = function () {
+        var criteria = $scope.criteria
+
+        for(var i=0;i<criteria.length;i++){
+            var tempCell1 = $scope.compTable[criteria[i]]['option1']
+            var tempCell2 = $scope.compTable[criteria[i]]['option2']
+
+            if(criteria[i]=='rating'){
+                console.log("diff: ")
+
+                if((parseFloat(tempCell1)-parseFloat(tempCell2))<0){
+                    document.getElementById('option2_rating').style.backgroundColor='green';
+                }
+                else if((parseFloat(tempCell1)-parseFloat(tempCell2))==0){
+                    document.getElementById('option1_rating').style.backgroundColor='yellow';
+                    document.getElementById('option2_rating').style.backgroundColor='yellow';
+                }
+                else{
+                    document.getElementById('option1_rating').style.backgroundColor='green';
+                }
+            }
+            else if(criteria[i]=='price'){
+                if(tempCell1.length<tempCell2.length){
+                    document.getElementById('option1_price').style.backgroundColor='green';
+                }
+                else if(tempCell1.length==tempCell2.length){
+                    document.getElementById('option1_price').style.backgroundColor='yellow';
+                    document.getElementById('option2_price').style.backgroundColor='yellow';
+                }
+                else{
+                    document.getElementById('option2_price').style.backgroundColor='green';
+                }
+            }
+            else if(criteria[i]=='distance (km)'){
+                if((parseInt(tempCell1)-parseInt(tempCell2))<0){
+                    document.getElementById('option1_distance (km)').style.backgroundColor='green';
+                }
+                else if((parseInt(tempCell1)-parseInt(tempCell2))==0){
+                    document.getElementById('option1_distance (km)').style.backgroundColor='yellow';
+                    document.getElementById('option2_distance (km)').style.backgroundColor='yellow';
+                }
+                else{
+                    document.getElementById('option2_distance (km)').style.backgroundColor='green';
+                }
+            }
+
+        }
+    }
+
 
     $scope.changeTab = function(nav){
 
         if(nav=='n'){
-            console.log($scope.selectedIndex)
             $scope.updateCriteria()
             $scope.selectedIndex=1
         }
@@ -84,11 +160,5 @@ app.controller("DialogController", function($scope, $mdDialog){
     $scope.answer = function(answer) {
         $mdDialog.hide(answer);
     };
-
-});
-
-app.controller('ChoiceCtrl', function($scope, $mdDialog) {
-
-
 
 });
