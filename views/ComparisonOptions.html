@@ -4,7 +4,8 @@
             <div style="background-color: red" class="md-toolbar-tools">
                 <h2 style="color:white">Comparison Window</h2>
                 <span flex></span>
-                <md-button class="md-icon-button" ng-click="cancel()">
+                <md-button class="fa fa-window-close" ng-click="cancel()" style="min-width:50px;width:50px;display:table-cell">
+                    <i style="vertical-align: middle" class="material-icons">close</i>
                 </md-button>
             </div>
         </md-toolbar>
@@ -14,77 +15,50 @@
                     <md-content style="color:black" class="md-padding">
                         <h2 style="color:black">Please select the comparison criteria you would like to use: </h2>
 
-                        <div layout="rows" ng-Cloak>
-                            <md-content layout-padding>
-                                <form name="criteriatForm">
-                                    <div layout-gt-xs="row">
-                                        <md-input-container class="md-block" flex-gt-xs>
-                                            <md-checkbox name="rating" ng-model="rating">
+                            <md-content style="text-align: center" layout-padding>
+                                <form name="criteriaForm">
+                                        <md-input-container  flex-gt-xs>
+                                            <md-checkbox ng-change="updateCriteria()" name="rating" ng-model="rating">
                                                 Rating
                                             </md-checkbox>
                                         </md-input-container>
-                                    </div>
-                                    <div layout-gt-xs="row">
-                                        <md-input-container class="md-block" flex-gt-xs>
-                                            <md-checkbox name="price" ng-model="price">
+                                        <md-input-container  flex-gt-xs>
+                                            <md-checkbox ng-change="updateCriteria()" name="price" ng-model="price">
                                                 Price
                                             </md-checkbox>
                                         </md-input-container>
-                                    </div>
-                                    <div layout-gt-xs="row">
-                                        <md-input-container class="md-block" flex-gt-xs>
-                                            <md-checkbox name="distance" ng-model="distance">
+                                        <md-input-container flex-gt-xs>
+                                            <md-checkbox ng-change="updateCriteria()" name="distance" ng-model="distance">
                                                 Distance
                                             </md-checkbox>
                                         </md-input-container>
+                                    <div>
+
                                     </div>
                                 </form>
+
+
+                                <div style="text-align: center;margin: 0 auto">
+                                <table ng-init='loadTable()' id="comparisonTable" class="comparisonTable" style="text-align: center">
+                                    <tr>
+                                        <th style="text-align:left;padding:8px;background-color: rgb(250,250,250)"></th>
+                                        <th style="text-align:left;padding:8px">{{info[option1]['name']}}</th>
+                                        <th style="text-align:left;padding:8px">{{info[option2]['name']}}</th>
+
+                                    </tr>
+                                </table>
+                                </div>
+
                             </md-content>
 
-                        </div>
 
-                        <div style="text-align: center">
-                            <md-button type="submit" class="md-raised md-primary" ng-click="changeTab('n')">
-                                Confirm
-                            </md-button>
-                        </div>
+
 
                     </md-content>
 
                 </md-tab>
-                <md-tab label="Results">
-                    <md-content class="md-padding">
 
-                        <table id="comparisonTable" class="comparisonTable">
-                            <tr>
-                                <th style="text-align:left;padding:8px">Criteria</th>
-                                <th style="text-align:left;padding:8px">{{info[option1]['name']}}</th>
-                                <th style="text-align:left;padding:8px">{{info[option2]['name']}}</th>
-
-                            </tr>
-                            <tr ng-repeat="x in criteria">
-                                <td style="text-align:left;padding:8px">{{x}}</td>
-                                <td style="text-align:left;padding:8px">{{info[option1][x]}}</td>
-                                <td style="text-align:left;padding:8px">{{info[option2][x]}}</td>
-                            </tr>
-                        </table>
-                        <div style="text-align: center">
-                            <md-button class="md-raised md-primary" ng-click="changeTab('b')">
-                                Back
-                            </md-button>
-                            <md-button class="md-raised md-primary" ng-click="highlightBest()">
-                                Visualize Comparison
-                            </md-button>
-                        </div>
-                    </md-content>
-                </md-tab>
-
-            </md-tabs>
+                    </md-tabs>
         </md-dialog-content>
-        <md-dialog-actions layout="row">
-            <md-button style="float: right" class="md-raised md-primary" ng-click="answer('not useful')">
-                Exit
-            </md-button>
-        </md-dialog-actions>
     </form>
 </md-dialog>

@@ -11,7 +11,8 @@
 
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
 </head>
 <body onload="loadPage()" ng-app="Comparison">
@@ -348,7 +349,7 @@
                     <md-button class="md-raised md-primary">
                         <a style="color:white" href="searchPage.html">Reset Choices</a>
                     </md-button>
-                    <md-button ng-click="openDialog()" class="md-raised md-primary">Compare Choices</md-button>
+                    <md-button ng-disabled="true" id="compareChoicesButton" ng-click="openDialog()" class="md-raised md-primary">Compare Choices</md-button>
                 </div>
 
             </div>

@@ -69,6 +69,7 @@ function drop(ev,loc) {
         ev.target.appendChild(document.getElementById(data));
         option1=data
         option1Taken=true
+        checkStatus()
     }
     else if(!option2Taken&&loc=='bottom') {
         document.getElementById("div2").innerHTML = "";
@@ -77,6 +78,13 @@ function drop(ev,loc) {
         ev.target.appendChild(document.getElementById(data));
         option2=data
         option2Taken=true
+        checkStatus()
+    }
+}
+
+function checkStatus(){
+    if(option1!=null && option2!=null){
+        document.getElementById('compareChoicesButton').removeAttribute('disabled')
     }
 }
 
