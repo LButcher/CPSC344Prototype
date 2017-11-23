@@ -25,22 +25,24 @@ app.controller('MainCtrl', function($scope, $mdDialog) {
 
 app.controller("DialogController", function($scope, $mdDialog){
 
-    $scope.selectedIndex = 0;
 
     $scope.info = info
     $scope.option1 = option1 //cafe1, sushi2 etc
     $scope.option2=option2
     $scope.confirm=false
 
+    //Checkboxes= True by default, easier for user to opt-out than to opt-in
     $scope.rating =true
     $scope.price =true
     $scope.distance =true
 
 
+    //Possible table criteria
     $scope.criteria =['rating','price','distance (km)']
 
 
 
+    //Update table criteria : Add/delete rows
     $scope.updateCriteria = function(){
             console.log("updating")
             console.log("crit: "+$scope.criteria)
@@ -78,6 +80,7 @@ app.controller("DialogController", function($scope, $mdDialog){
 
     };
 
+    //Generate full table on first time load
     $scope.loadTable=function () {
         console.log("loading table")
         for(var i = 0;i<$scope.criteria.length;i++){
@@ -93,6 +96,7 @@ app.controller("DialogController", function($scope, $mdDialog){
         $scope.insertRowCells(cell0,cell1,cell2,criteria)
     }
 
+    //Generates the cell information for the added row
     $scope.insertRowCells =function(cell0,cell1,cell2, criteria){
         cell0.innerHTML = criteria
         cell1.innerHTML = $scope.info[option1][criteria]
@@ -113,6 +117,8 @@ app.controller("DialogController", function($scope, $mdDialog){
     }
 
 
+    // Compares cell1 to cell2 and depending on the criteria of that row decides which is "better".
+        // Highlighted "better" cell, both if equal
     $scope.compareCells = function (cell1, cell2,criteria) {
 
             if(criteria=='rating'){

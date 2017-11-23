@@ -5,6 +5,7 @@
 
 var option1Taken = false
 var option2Taken = false
+
 var option1 =null
 var option2 =null
 
@@ -51,7 +52,8 @@ var searchTerm = window.sessionStorage.getItem("searchTerm")
 
 
 
-//From w3 Schools
+//From w3 Schools: Drag and drop events (allowDrop, drag, drop)
+    // Edited to preserve choices on drag and drop events and distinguish between dropped locations
 function allowDrop(ev) {
     //console.log(ev)
     ev.preventDefault();
@@ -82,16 +84,18 @@ function drop(ev,loc) {
     }
 }
 
+//Just check if comparison tool is ready, disable button to open if not
 function checkStatus(){
     if(option1!=null && option2!=null){
         document.getElementById('compareChoicesButton').removeAttribute('disabled')
     }
 }
 
+// Loads search results based on initial search term OR search term specified on search results page
 function loadPage(){
     loadResults(searchTerm)
 }
-
+//Make div for specific search results visible depending on search term
 function loadResults(type){
     if(type=='sushi'){
         document.getElementById("resultsLocCafe").style.display='none'
