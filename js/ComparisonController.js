@@ -32,9 +32,9 @@ app.controller("DialogController", function($scope, $mdDialog){
     $scope.confirm=false
 
     //Checkboxes= True by default, easier for user to opt-out than to opt-in
-    $scope.rating =true
-    $scope.price =true
-    $scope.distance =true
+    $scope.rating =false
+    $scope.price =false
+    $scope.distance =false
 
 
     //Possible table criteria
@@ -44,9 +44,6 @@ app.controller("DialogController", function($scope, $mdDialog){
 
     //Update table criteria : Add/delete rows
     $scope.updateCriteria = function(){
-            console.log("updating")
-            console.log("crit: "+$scope.criteria)
-        console.log("rat: "+$scope.rating)
         if($scope.rating==true && $scope.criteria.indexOf('rating')==-1){
            $scope.criteria.push('rating')
             $scope.insertRow('rating')
@@ -82,7 +79,7 @@ app.controller("DialogController", function($scope, $mdDialog){
 
     //Generate full table on first time load
     $scope.loadTable=function () {
-        console.log("loading table")
+        $scope.updateCriteria()
         for(var i = 0;i<$scope.criteria.length;i++){
             $scope.insertRow($scope.criteria[i])
         }
@@ -106,11 +103,9 @@ app.controller("DialogController", function($scope, $mdDialog){
 
     $scope.deleteRow = function(criteria){
         var rows = document.getElementById('comparisonTable').rows;
-        console.log("deleting "+criteria)
         //start at 1 because we don't care about header
         for(var i=1;i<rows.length;i++){
             if(rows[i].cells[0].innerHTML==criteria){
-                console.log("going to delete this.")
                 document.getElementById('comparisonTable').deleteRow(i);
             }
         }
@@ -124,19 +119,19 @@ app.controller("DialogController", function($scope, $mdDialog){
             if(criteria=='rating'){
 
                 if((parseFloat(cell1.innerHTML)-parseFloat(cell2.innerHTML))<0){
-                    $scope.highlightCell(cell2,'green')
+                    $scope.highlightCell(cell2,'lime')
                 }
                 else if((parseFloat(cell1.innerHTML)-parseFloat(cell2.innerHTML))==0){
                     $scope.highlightCell(cell1,'yellow')
                     $scope.highlightCell(cell2,'yellow')
                 }
                 else{
-                    $scope.highlightCell(cell1,'green')
+                    $scope.highlightCell(cell1,'lime')
                 }
             }
             else if(criteria=='price'){
                 if(cell1.innerHTML.length<cell2.innerHTML.length){
-                    $scope.highlightCell(cell1,'green')
+                    $scope.highlightCell(cell1,'lime')
 
                 }
                 else if(cell1.innerHTML.length==cell2.innerHTML.length){
@@ -144,21 +139,20 @@ app.controller("DialogController", function($scope, $mdDialog){
                     $scope.highlightCell(cell2,'yellow')
                 }
                 else{
-                    $scope.highlightCell(cell2,'green')
+                    $scope.highlightCell(cell2,'lime')
 
                 }
             }
             else if(criteria=='distance (km)'){
                 if((parseFloat(cell1.innerHTML)-parseFloat(cell2.innerHTML))<0){
-                    $scope.highlightCell(cell1,'green')
+                    $scope.highlightCell(cell1,'lime')
                 }
                 else if((parseFloat(cell1.innerHTML)-parseFloat(cell2.innerHTML))==0){
                     $scope.highlightCell(cell1,'yellow')
                     $scope.highlightCell(cell2,'yellow')
                 }
                 else{
-                    console.log("hjererer "+(parseFloat(cell1.innerHTML)-parseFloat(cell2.innerHTML)))
-                    $scope.highlightCell(cell2,'green')
+                    $scope.highlightCell(cell2,'lime')
                 }
             }
 
